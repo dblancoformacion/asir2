@@ -21,18 +21,18 @@
 					<p>Contenidos mínimos para el Proyecto Fin de Ciclo</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Puesta en marcha de los servicios de red necesarios para el lanzamiento de una actividad</a>
+					<a href="#banner" class="button style2 scrolly-middle">Objetivo</a>
 				</footer>
 			</section>
 
 		<!-- Banner -->
 			<section id="banner">
 				<header>
-					<h2>Comenzamos seleccionando un hosting</h2>
+					<h2>Objetivo</h2>
 				</header>
-				<p>Necesitamos administrar en la nube toda la infraestructura necesaria para gestionar la actividad: web, correo electrónico, base de datos, feeds de noticias, formularios de gestión, canal de vídeo, interfaz conversacional, ...</p>
+				<p>Puesta en marcha de los servicios de red e internet necesarios para el lanzamiento de la actividad</p>
 				<footer>
-					<a href="https://www.000webhost.com/" class="button style2 scrolly" target="_blank">Probemos con un hosting gratuito...</a>
+					<a href="#sec0" class="button style2 scrolly">Servicios propuestos</a>
 				</footer>
 			</section>
 
@@ -274,6 +274,10 @@
 function features(){
 	$fs=[
 		[
+			'srv'=>'Servicio de Hosting',
+			'dsc'=>'Comenzamos seleccionando un <a href="https://www.000webhost.com/" target="_blank">hosting</a>. Necesitamos administrar en la nube toda la infraestructura necesaria para gestionar la actividad: web, correo electrónico, base de datos, feeds de noticias, formularios de gestión, canal de vídeo, interfaz conversacional, etc',
+		],
+		[
 			'srv'=>'Servicios DHCP y DNS',
 			'dsc'=>'Configuraremos nuestro equipo con una dirección IP dinámica para que acceda a internet a través de la IP y los servidores de DNS que les facilite el router',
 		],
@@ -305,15 +309,23 @@ function features(){
 	$txt=null;
 	foreach($fs as $i=>$f){
 		if($i%2) $align='left'; else $align='right';
+		if(isset($fs[$i-1])) $bck='sec'.($i-1); else $bck='banner';
+		if(isset($fs[$i+1])) $fwd='sec'.($i+1); else $fwd='footer';
 		$txt.='
 			<article id="first" class="container box style1 '.$align.'">
-				<a href="#" class="image fit"><img src="images/pic'.sprintf('%02d',$i+1).'.jpg" alt="" /></a>
+				<section id="'.('sec'.$i).'">
+				<a href="#" class="image fit"><img src="images/pic'.sprintf('%02d',$i).'.jpg" alt="" /></a>
 				<div class="inner">
 					<header>
 						<h2>'.$f['srv'].'</h2>
 					</header>
 					<p>'.$f['dsc'].'</p>
+					<p>
+						<a href="#'.$bck.'" class="style2 scrolly"><<</a>
+						<a href="#'.$fwd.'" class="style2 scrolly">>></a>
+					</p>
 				</div>
+				</section>
 			</article>
 		';
 	}
