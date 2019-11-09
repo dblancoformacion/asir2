@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Overflow by HTML5 UP</title>
+		<title>SRI Decroly</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,55 +17,33 @@
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<h1>Overflow</h1>
-					<p>By HTML5 UP</p>
+					<h1>Servicios de Red e Internet</h1>
+					<p>ASIR2 - Decroly</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Proceed as anticipated</a>
+					<a href="#banner" class="button style2 scrolly-middle">Vamos a poner en marcha un servicio web para un cliente: la página de aterrizaje para un evento</a>
 				</footer>
 			</section>
 
 		<!-- Banner -->
 			<section id="banner">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>Empezamos buscando un hosting</h2>
 				</header>
-				<p>A brand new site template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>.<br />
-				It’s responsive, built on HTML5/CSS3, and entirely free<br />
-				under the <a href="http://html5up.net/license">Creative Commons license</a>.</p>
+				<p>Necesitamos alojar en la nube toda la infraestructura necesaria para gestionar el evento: web, correo electrónico, base de datos, ...</p>
 				<footer>
-					<a href="#first" class="button style2 scrolly">Act on this message</a>
+					<a href="https://www.000webhost.com/" class="button style2 scrolly" target="_blank">Probemos con un hosting gratuito...</a>
 				</footer>
 			</section>
 
-		<!-- Feature 1 -->
-			<article id="first" class="container box style1 right">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-				<div class="inner">
-					<header>
-						<h2>Lorem ipsum<br />
-						dolor sit amet</h2>
-					</header>
-					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
-				</div>
-			</article>
-
-		<!-- Feature 2 -->
-			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-				<div class="inner">
-					<header>
-						<h2>Mollis posuere<br />
-						lectus lacus</h2>
-					</header>
-					<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.</p>
-				</div>
-			</article>
+		<!-- Feature -->
+			<?php features();?>
 
 		<!-- Portfolio -->
+		<!--
 			<article class="container box style2">
 				<header>
-					<h2>Magnis parturient</h2>
+					<h2>Servicio FTP</h2>
 					<p>Justo phasellus et aenean dignissim<br />
 					placerat cubilia purus lectus.</p>
 				</header>
@@ -84,8 +62,10 @@
 					</div>
 				</div>
 			</article>
+		-->
 
 		<!-- Contact -->
+		<!--
 			<article class="container box style3">
 				<header>
 					<h2>Nisl sed ultricies</h2>
@@ -106,6 +86,7 @@
 					</div>
 				</form>
 			</article>
+		-->
 
 		<!-- Generic -->
 		<!--
@@ -258,12 +239,16 @@
 
 		<section id="footer">
 			<ul class="icons">
+				<li><a href="http://moodledecroly.com/" target="_blank" class="icon brands fa-dribbble"><span class="label">Decroly</span></a></li>
+				<li><a href="https://github.com/dblancoformacion/asir2/web" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://es.stackoverflow.com/" target="_blank" class="icon brands fa-stack-overflow"><span class="label">Stackoverflow</span></a></li>
+				<!--
 				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
 				<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 				<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				-->
 			</ul>
 			<div class="copyright">
 				<ul class="menu">
@@ -283,3 +268,54 @@
 
 	</body>
 </html>
+
+<?php
+
+function features(){
+	$fs=[
+		[
+			'srv'=>'Servicios DHCP y DNS',
+			'dsc'=>'Configuraremos nuestro equipo con una dirección IP dinámica para que acceda a internet a través de la IP y los servidores de DNS que les facilite el router',
+		],
+		[
+			'srv'=>'Servicio web',
+			'dsc'=>'Buscaremos una plantilla para evitarnos todo el proceso de diseño, y la modificaremos para que sirva a nuestro propósito',
+		],
+		[
+			'srv'=>'Servico de FTP',
+			'dsc'=>'Los ficheros los subiremos al hosting a través de un cliente FTP',
+		],
+		[
+			'srv'=>'Servicio de email',
+			'dsc'=>'Crearemos los buzones necesarios, así como los redireccionamientos y listas de distribución que se precisen para la puesta en marcha de la actividad',
+		],
+		[
+			'srv'=>'Servicio RSS',
+			'dsc'=>'',
+		],
+		[
+			'srv'=>'Servicio de vídeo',
+			'dsc'=>'',
+		],
+		[
+			'srv'=>'Servicio de interfaz conversacional',
+			'dsc'=>'',
+		],
+	];
+	$txt=null;
+	foreach($fs as $i=>$f){
+		if($i%2) $align='left'; else $align='right';
+		$txt.='
+			<article id="first" class="container box style1 '.$align.'">
+				<a href="#" class="image fit"><img src="images/pic'.sprintf('%02d',$i+1).'.jpg" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>'.$f['srv'].'</h2>
+					</header>
+					<p>'.$f['dsc'].'</p>
+				</div>
+			</article>
+		';
+	}
+	echo $txt;
+}
