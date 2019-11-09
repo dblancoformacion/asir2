@@ -18,19 +18,19 @@
 			<section id="header">
 				<header>
 					<h1>Servicios de Red e Internet</h1>
-					<p>ASIR2 - Decroly</p>
+					<p>Contenidos mínimos para el Proyecto Fin de Ciclo</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Vamos a poner en marcha un servicio web para un cliente: la página de aterrizaje para un evento</a>
+					<a href="#banner" class="button style2 scrolly-middle">Puesta en marcha de los servicios de red necesarios para el lanzamiento de una actividad</a>
 				</footer>
 			</section>
 
 		<!-- Banner -->
 			<section id="banner">
 				<header>
-					<h2>Empezamos buscando un hosting</h2>
+					<h2>Comenzamos seleccionando un hosting</h2>
 				</header>
-				<p>Necesitamos alojar en la nube toda la infraestructura necesaria para gestionar el evento: web, correo electrónico, base de datos, ...</p>
+				<p>Necesitamos administrar en la nube toda la infraestructura necesaria para gestionar la actividad: web, correo electrónico, base de datos, feeds de noticias, formularios de gestión, canal de vídeo, interfaz conversacional, ...</p>
 				<footer>
 					<a href="https://www.000webhost.com/" class="button style2 scrolly" target="_blank">Probemos con un hosting gratuito...</a>
 				</footer>
@@ -240,7 +240,7 @@
 		<section id="footer">
 			<ul class="icons">
 				<li><a href="http://moodledecroly.com/" target="_blank" class="icon brands fa-dribbble"><span class="label">Decroly</span></a></li>
-				<li><a href="https://github.com/dblancoformacion/asir2/web" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://github.com/dblancoformacion/asir2/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 				<li><a href="https://es.stackoverflow.com/" target="_blank" class="icon brands fa-stack-overflow"><span class="label">Stackoverflow</span></a></li>
 				<!--
 				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -279,27 +279,27 @@ function features(){
 		],
 		[
 			'srv'=>'Servicio web',
-			'dsc'=>'Buscaremos una plantilla para evitarnos todo el proceso de diseño, y la modificaremos para que sirva a nuestro propósito',
+			'dsc'=>'Buscaremos una <a href="https://html5up.net/" target="_blank">plantilla</a> para evitar el proceso de diseño, y la modificaremos para que sirva a nuestro propósito. Al menos tendrá que contener un formulario para registrar a nuestros suscriptores, así como una estadística de las visitas que reciba. Será una página de aterrizaje, no podemos hacer uso de un CMS',
 		],
 		[
 			'srv'=>'Servico de FTP',
-			'dsc'=>'Los ficheros los subiremos al hosting a través de un cliente FTP',
+			'dsc'=>'Los ficheros los subiremos al hosting a través de un <a href="https://winscp.net/eng/download.php" target="_blank">cliente FTP</a>, y habilitaremos un canal para que nuestros colaboradores nos puedan hacer llegar ficheros a través de este sistema',
 		],
 		[
 			'srv'=>'Servicio de email',
-			'dsc'=>'Crearemos los buzones necesarios, así como los redireccionamientos y listas de distribución que se precisen para la puesta en marcha de la actividad',
+			'dsc'=>'Crearemos los buzones necesarios, así como los redireccionamientos y listas de distribución que se precisen para la puesta en marcha de la actividad. Así mismo, tendremos que ser capaces de interactuar con nuestro buzón de correo para extraer, de forma automática, información que nos hagan llegar sistemáticamete a través de este medio nuestros colaboradores externos (avisos, notificaciones, alertas, ... ).',
 		],
 		[
 			'srv'=>'Servicio RSS',
-			'dsc'=>'',
+			'dsc'=>'Debemos ser capaces de poner en marcha un feed de noticias al que puedan conectar nuestros suscriptores sin necesidad de revisar periódicamente nuestra web. Así como alimentar nuestra base de datos con un RSS externo.',
 		],
 		[
 			'srv'=>'Servicio de vídeo',
-			'dsc'=>'',
+			'dsc'=>'La actividad deberá tener presencia audiovisual, para lo que habilitaremos este canal de comunicaciones y lo incrustaremos en nuestra web',
 		],
 		[
-			'srv'=>'Servicio de interfaz conversacional',
-			'dsc'=>'',
+			'srv'=>'Servicio de mensajería instantánea e interfaz conversacional',
+			'dsc'=>'Las dudas que recibe el servicio de atención telefónica son habitualmente las mismas. Dotaremos a la infraestructura de red del servicio de interfaz conversacional para descargar de las dudas más habituales al servicio de atención al cliente.',
 		],
 	];
 	$txt=null;
